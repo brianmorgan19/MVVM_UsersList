@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/data_nav"
+    app:startDestination="@id/recyclerview">
+
+    <fragment
+        android:id="@+id/recyclerview"
+        android:name="com.example.roomdatabase.recyclerview"
+        android:label="fragment_recyclerview"
+        tools:layout="@layout/fragment_recyclerview" >
+        <action
+            android:id="@+id/action_recyclerview_to_editUser"
+            app:destination="@id/editUser" />
+        <action
+            android:id="@+id/action_recyclerview_to_delete"
+            app:destination="@id/delete" />
+        <action
+            android:id="@+id/action_recyclerview_to_update"
+            app:destination="@id/update" />
+    </fragment>
+    <fragment
+        android:id="@+id/editUser"
+        android:name="com.example.roomdatabase.editUser"
+        android:label="fragment_edit_user"
+        tools:layout="@layout/fragment_edit_user" >
+        <action
+            android:id="@+id/action_editUser_to_recyclerview"
+            app:destination="@id/recyclerview" />
+    </fragment>
+    <fragment
+        android:id="@+id/delete"
+        android:name="com.example.roomdatabase.delete"
+        android:label="fragment_delete"
+        tools:layout="@layout/fragment_delete" >
+        <action
+            android:id="@+id/action_delete_to_recyclerview"
+            app:destination="@id/recyclerview" />
+    </fragment>
+    <fragment
+        android:id="@+id/update"
+        android:name="com.example.roomdatabase.update"
+        android:label="fragment_update"
+        tools:layout="@layout/fragment_update" >
+        <action
+            android:id="@+id/action_update_to_recyclerview"
+            app:destination="@id/recyclerview" />
+    </fragment>
+</navigation>
